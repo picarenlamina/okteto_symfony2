@@ -15,7 +15,7 @@ RUN a2enmod rewrite
 #RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer && composer install --no-dev --prefer-dist --no-scripts --no-progress --no-suggest --optimize-autoloader
 
 # Copy the rest of the application source code
-COPY . .
+COPY /html .
 
 # Set the ownership and permissions of files and directories 
 #RUN chown -R www-data:www-data var && chmod -R 777 var
