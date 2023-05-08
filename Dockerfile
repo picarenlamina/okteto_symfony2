@@ -12,8 +12,7 @@ RUN a2enmod rewrite
 
 # Copy composer files and install dependencies
 #COPY composer.json composer.lock ./
-#RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer \
-    && composer install --no-dev --prefer-dist --no-scripts --no-progress --no-suggest --optimize-autoloader
+#RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer && composer install --no-dev --prefer-dist --no-scripts --no-progress --no-suggest --optimize-autoloader
 
 # Copy the rest of the application source code
 COPY . .
