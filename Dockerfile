@@ -18,7 +18,7 @@ RUN a2enmod rewrite
 COPY /html .
 
 # Set the ownership and permissions of files and directories 
-RUN chown -R www-data:www-data var && chmod -R 777 var
+#RUN chown -R www-data:www-data var && chmod -R 777 var
 
 # Expose port 80 for Apache
 EXPOSE 80
